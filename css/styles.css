@@ -269,3 +269,58 @@ body {
       max-width: 100px; /* Reducir más el logo en dispositivos móviles */
   }
 }
+/* Imagen inferior, oculta en escritorio */
+.bottom-image {
+  display: none;
+  width: 100%; /* Imagen ocupa todo el ancho */
+  max-height: 40vh; /* Ajusta la altura máxima */
+  object-fit: cover; /* Mantiene proporciones */
+}
+/* Imagen inferior, oculta en escritorio */
+.logo-bottom {
+  display: none;
+  width: 100%; /* Imagen ocupa todo el ancho */
+  max-height: 40vh; /* Ajusta la altura máxima */
+  object-fit: cover; /* Mantiene proporciones */
+}
+/* Versión móvil */
+@media (max-width: 768px) {
+  /* Asegura que la imagen esté abajo del todo */
+body {
+  display: flex;
+  flex-direction: column; /* Ordena el contenido en columna */
+  justify-content: space-between; /* Distribuye espacio entre los elementos */
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura */
+  margin: 0; /* Elimina márgenes */
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('../img/Capa\ 1.png'); /* Fondo por defecto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo {
+  display: none; /* Oculta el logo en móviles */
+  
+}
+    .bottom-image {
+        display: block; /* Muestra la imagen solo en móviles */
+    }
+
+    .form-container {
+        margin-bottom: 20px; /* Agrega espacio entre el box y la imagen */
+    }
+    .logo-bottom {
+      display: block; /* Mostrar logo solo en móviles */
+      max-width: 100px;
+      
+  }
+}
