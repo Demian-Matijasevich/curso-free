@@ -295,28 +295,13 @@ body {
 
 
 
-@media screen and (max-width: 479px) {
- 
-  .button {
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
-    font-size: 1rem;
-  }
 
-  .button_view-more {
-    font-size: 1rem;
-  }
-
-  .svg_long-arrow {
-    width: .8rem;
-  }
-
-}
 
 
 @media (max-width: 768px) {
   body {
-      justify-content: center;
+    background-image: url('../img/Capa\ 1.png');
+    min-height: 100vh;
   }
 
   .form-container {
@@ -349,42 +334,65 @@ body {
 }
 /* Versión móvil */
 @media (max-width: 768px) {
-  /* Asegura que la imagen esté abajo del todo */
-body {
-  display: flex;
-  flex-direction: column; /* Ordena el contenido en columna */
-  justify-content: space-between; /* Distribuye espacio entre los elementos */
-  min-height: 100vh; /* Asegura que el body ocupe toda la altura */
-  margin: 0; /* Elimina márgenes */
-}
 
-/* Estilos generales */
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-image: url('../img/Capa\ 1.png'); /* Fondo por defecto */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.logo {
-  display: none; /* Oculta el logo en móviles */
-  
-}
-    .bottom-image {
-        display: block; /* Muestra la imagen solo en móviles */
-    }
-
-    .form-container {
-        margin-bottom: 20px; /* Agrega espacio entre el box y la imagen */
-    }
-    .logo-bottom {
-      display: block; /* Mostrar logo solo en móviles */
-      max-width: 100px;
-      
+  html, body {
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina rellenos */
+    height: 100%; /* Asegura que el html y el body ocupen toda la altura */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
   }
+  body {
+    display: flex;
+    flex-direction: column; /* Ordena los elementos en columna */
+    justify-content: space-between; /* Espacia el contenido */
+    background-image: url('../img/Capa\ 1.png'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    min-height: 100vh; /* Asegura la altura mínima */
+    max-height: 100vh; /* Limita la altura máxima */
+    box-sizing: border-box; /* Incluye bordes y padding en el cálculo del tamaño */
+  }
+  .form-container {
+    flex: 1; /* Permite que este contenedor se expanda */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    max-width: 90%; /* Ajusta el ancho máximo */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+  }
+  .bottom-image {
+    display: block; /* Muestra la imagen */
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+    object-fit: cover; /* Mantiene proporciones */
+    margin-top: auto; /* Empuja la imagen al final de la pantalla */
+  }
+
+  .logo {
+    display: none; /* Oculta el logo de la versión de escritorio */
+  }
+
+  .logo-bottom {
+    display: block; /* Muestra el logo en móviles */
+    max-width: 100px;
+    margin: 0 auto; /* Centra el logo */
+  }
+}
+
+@media screen and (max-width: 479px) {
+ 
+  .button {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .button_view-more {
+    font-size: 1rem;
+  }
+
+  .svg_long-arrow {
+    width: .8rem;
+  }
+
 }
